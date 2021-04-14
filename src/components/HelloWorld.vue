@@ -14,10 +14,19 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted(){
+    this.haha();
+  },
+  methods:{
+    haha(){
+      axios.get('/api/index');
+    }
   }
 }
 </script>

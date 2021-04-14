@@ -1,10 +1,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Wshare App"/>
+  <!-- <haha /> -->
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+// import haha from './api/post'
 
 export default {
   name: 'App',
@@ -12,6 +14,7 @@ export default {
     HelloWorld
   }
 }
+
 </script>
 
 <style>

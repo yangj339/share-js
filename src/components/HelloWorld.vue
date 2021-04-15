@@ -1,16 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    
-    
-    
   </div>
+  <!-- <div>
+    username: <input v-model="message1" placeholder="edit me">
+    <br>
+    password: <input v-model="message1" placeholder="edit me" type="password">
+    <br>
+    <button style="weight:1000px">登陆</button>
+    <p>Message is: {{message1}}</p>
+  </div> -->
+  
 </template>
 
 <script>
@@ -21,14 +21,20 @@ export default {
     msg: String
   },
   mounted(){
-    this.haha();
+    this.haha('message1');
+    document.body.style.backgroundColor="#afbeff";
   },
   methods:{
-    haha(){
-      axios.get('/api/index');
+    haha(msg){
+      axios.get('/api/index',{
+        params:{
+          test:msg
+        }
+      });
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

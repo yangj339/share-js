@@ -1,17 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Wshare App"/>
-  <!-- <haha /> -->
+  <HelloWorld msg="share page" />
+  <!-- <Header></Header> -->
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-// import haha from './api/post'
-
+// import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    // Header
   }
 }
 

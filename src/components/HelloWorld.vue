@@ -1,15 +1,22 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+
+<el-row :gutter="20">
+  <div class="background">
+    <img src="@/assets/juan.jpg" height="750px" width="1700px"/>
+</div>
+  <el-col :span="5" :offset="18">
+    <div class="front">
+    <!-- <h1>{{ msg }}</h1> -->
+    用户名：<el-input v-model="userInput" placeholder="输入用户名" clearable="" size="small" style="weight:100px"></el-input>
+    <br>
+    密码：  <el-input v-model="passInput" type="password" placeholder="输入密码" clearable="" size="small"></el-input>
   </div>
-  <!-- <div>
-    username: <input v-model="message1" placeholder="edit me">
-    <br>
-    password: <input v-model="message1" placeholder="edit me" type="password">
-    <br>
-    <button style="weight:1000px">登陆</button>
-    <p>Message is: {{message1}}</p>
-  </div> -->
+  
+  </el-col>
+  
+</el-row>
+  
+  
   
 </template>
 
@@ -20,9 +27,15 @@ export default {
   props: {
     msg: String
   },
+  data() {
+      return {
+        userInput: '',
+        passInput: ''
+      }
+    },
   mounted(){
     this.haha('message1');
-    document.body.style.backgroundColor="#afbeff";
+    // document.body.style.backgroundColor="#afbeff";
   },
   methods:{
     haha(msg){
@@ -52,5 +65,19 @@ li {
 }
 a {
   color: #42b983;
+}
+.el-col {
+    margin-top: 100px;
+  }
+
+.background{
+    width:80%;  
+    height:50%;  /**宽高100%是为了图片铺满屏幕 */
+    z-index:-1;
+    position: absolute;
+}
+.front{
+    z-index:1;
+    position: absolute;
 }
 </style>

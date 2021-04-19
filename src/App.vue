@@ -1,16 +1,16 @@
 <template>
   <HelloWorld msg="share page" />
-  <!-- <Header></Header> -->
+  <!-- <Login /> -->
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-// import Header from './components/Header.vue'
+// import Login from './views/Login.vue'
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    // Header
+    // Login
   }
 }
 
